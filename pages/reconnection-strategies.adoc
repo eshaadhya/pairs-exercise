@@ -1,11 +1,11 @@
 //Exercise #1
 
-When a Mule app starts, a connectivity test runs on components, such as the HTTP or FTP connector. You should connect to an external server and if the test fails the default behavior is to log a warning message and continue with the deployment of the app.
+When a Mule app starts, a connectivity test runs on components, such as the HTTP or FTP connector. You should connect to an external server and if the test fails the default behavior is to show a warning message and continue with the deployment of the app.
 
 You can modify this behavior by setting a number of reconnection attempts to try after connection attempts fail.
 
 * Fail Deployment (`failsDeployment`): Forces the deployment to fail if reconection attempts are exhausted.
-* Reconnect (`reconnect`): Limits the number of reconnection attempts and the interval at which to execute them. For example, you can set a count of 5 reconnection attempts at a `frequency` of every `4000` milliseconds (ms). Defaults to 2 reconnection attempts at a frequency of `2000ms`.
+* Reconnect (`reconnect`): Limits the number of reconnection attempts and the interval at which to execute them. For example: you can set a count of 5 reconnection attempts at a `frequency` of every `4000` milliseconds (ms). Defaults to 2 reconnection attempts at a frequency of `2000ms`.
 * Example as shown below: connection failure after 5 reconnection attempts are exhausted:
 
 [source,xml]
